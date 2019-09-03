@@ -2,12 +2,16 @@ $(document).on("click","#local",function(){
 
 function checkConnection() {
     var networkState = navigator.connection.type;
-
-    var states = {};
-    states[Connection.NONE]     = 'No network connection';
+    if(navigator.connection.type == Connection.NONE){
+      alert('No network connection')
+      navigator.notification.beep(3);
+      navigator.vibrate(6000);
+    }
 }
 
 checkConnection();
+
+navigator.notification.beep(1);
 
 var onSuccess = function(position) {
 
