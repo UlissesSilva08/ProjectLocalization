@@ -48,3 +48,10 @@ h1{
 .local:hover::before{
   left: 250px;
 }
+
+#map{
+  margin-top: 20vh;
+  width: 80%;
+  height: 530px;
+  position: center;
+}
